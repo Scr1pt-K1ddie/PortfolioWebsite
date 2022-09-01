@@ -1,0 +1,362 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato';
+}
+
+.flex-container {
+    display: flex;
+}
+
+body {
+    background-color: white;
+    font-family: 'Lato';
+}
+
+.banner {
+    display: flex;
+    background-image: url('/Images/Untitled\ design.png');
+    background-repeat: no-repeat;
+    height: 350px;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@media only screen and (max-width: 500px) {
+    .banner {
+        display: none !important;
+    }
+}
+
+/* Start of Header */
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: #D01C1FFF;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    justify-content: space-between;
+    align-items: center;
+    transition: 1s;
+    padding: 20px 0;
+    font-size: 14px;
+    z-index: 999999999999;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    font-family: 'Lato';
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    margin: 0 40px;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    transform: 0.6s;
+}
+
+.sticky {
+    background-color: #4B878BFF;
+}
+
+header ul li a:hover {
+    color: rgb(12, 80, 85);
+    border-bottom: 2px solid rgb(12, 80, 85);
+    padding-bottom: 5px;
+}
+
+/* End of Header */
+
+.top_section {
+    margin-top: 60px;
+    width: 100%;
+    height: 600px;
+    background-color: #D01C1FFF;
+    color: #ffffff;
+    position: relative;
+    text-align: center;
+    font-size: 150px;
+    font-family: 'Lato';
+    font-weight: bold;
+}
+
+.textSlides {
+    display: none;
+    padding-top: 170px;
+}
+
+
+/* start of fade animation on top text */
+
+.fade {
+    animation: fade 6s linear forwards;
+}
+
+@keyframes fade {
+
+    0%,
+    100% {
+        opacity: 0
+    }
+
+    25%,
+    75% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+}
+
+/* end of fade animation on top text */
+
+/* Start of About Me section*/
+.aboutMe {
+    background-color: #ffffff;
+    height: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 110px;
+}
+
+@media only screen and (min-height: 850px) {
+    .aboutMe {
+        height: 700px;
+    }
+
+    .banner {
+        background-repeat: repeat;
+    }
+}
+
+.aboutSection {
+    width: 55%;
+    text-align: justify;
+    font-size: 18px;
+    animation-name: slideInRight;
+    animation-duration: 4s;
+    padding-top: 20px;
+    color: #4B878BFF;
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(-1500px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+.aboutImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation-name: slideInLeft;
+    animation-duration: 4s;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(1500px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+.profileImage {
+    height: 25%;
+    width: 100%;
+    border: 10px solid rgb(12, 80, 85);
+    border-radius: 60px;
+}
+
+/* End of About Me Section */
+
+/* Start of Skills Section */
+
+.skills {
+    background-color: #D01C1FFF;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 90px;
+    color: #ffffff;
+}
+
+.skillsCard1 {
+    margin-top: 120px;
+    padding-left: 50px;
+    width: 42%;
+    background-color: #4B878BFF;
+    height: 450px;
+    border-radius: 35px;
+    box-shadow: 0px 0px 40px 4px #000;
+    font-size: 20px;
+}
+
+.skillsCard2 {
+    margin-top: 190px;
+    padding-left: 50px;
+    margin-left: 97px;
+    width: 42%;
+    height: 450px;
+    background-color: #4B878BFF;
+    border-radius: 35px;
+    box-shadow: 0px 0px 40px 4px #000;
+    font-size: 20px;
+}
+
+
+.skillsList li {
+    padding-bottom: 10px;
+    list-style: square;
+}
+
+/* start of experience section */
+.experience {
+    background-color: #ffffff;
+    padding-left: 40px;
+    padding-top: 90px;
+    color: rgb(12, 80, 85);
+    height: 2000px;
+}
+
+.topImg {
+    width: 30%
+}
+
+.topTextDiv {
+    width: 70%;
+    padding-left: 20px;
+    float: right;
+}
+
+.textDiv {
+    width: 70%;
+    padding-left: 20px;
+    float: right;
+}
+
+.imgDiv {
+    padding-top: 70px;
+    width: 30%;
+}
+
+.experienceCont {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.experience img {
+    width: 100%;
+    float: left;
+    border-radius: 15px;
+}
+
+.experience h2 {
+    font-size: 35px;
+    letter-spacing: 1.5px;
+    ;
+}
+
+.experience p {
+    font-size: 20px;
+}
+
+.textPart1 {
+    padding-top: 110px;
+}
+
+.textPart2 {
+    padding-top: 180px;
+}
+
+
+/* Start of Footer Section */
+footer {
+    background-color: #4B878BFF;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 50px;
+    padding-right: 100px;
+}
+
+.footerLogo {
+    padding-top: 50px;
+    text-align: center;
+    width: 33%;
+}
+
+footer img {
+    width: 200px;
+}
+
+.footerContact {
+    padding-top: 50px;
+    font-size: 25px;
+    width: 33%;
+    text-align: center;
+}
+
+footer h2 {
+    color: #ffffff;
+}
+
+.footerAbout {
+    padding-top: 50px;
+    width: 33%;
+    text-align: center;
+}
+
+footer p {
+    font-size: 16px;
+    color: #ffffff;
+}
