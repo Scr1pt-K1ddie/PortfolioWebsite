@@ -20,7 +20,7 @@ body {
 
 .banner {
     display: flex;
-    background-image: url('/Images/Untitled\ design.png');
+    background-image: url('Untitled\ design.png');
     background-repeat: no-repeat;
     height: 350px;
     background-position: center;
